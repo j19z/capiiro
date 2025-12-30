@@ -9,10 +9,20 @@ const Hero = () => {
 
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            {/* Background Decor */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl animate-pulse" />
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: 'url("/hero-bg.png")' }}
+                />
+                {/* Dynamic Overlay: Darker in dark mode, subtle tint in light mode */}
+                <div className="absolute inset-0 bg-background-light/40 dark:bg-background-dark/70 backdrop-blur-[2px]" />
+            </div>
+
+            {/* Background Decor (kept for depth) */}
+            <div className="absolute inset-0 z-0 overflow-hidden opacity-50">
+                <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-3xl animate-pulse" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10 text-center">
@@ -30,7 +40,7 @@ const Hero = () => {
                         Capiiro Organizing
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-lora italic text-secondary dark:text-primary mb-6 leading-tight">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-lora italic text-secondary dark:text-primary mb-6 leading-tight drop-shadow-sm">
                         {t("hero.title")}
                     </h1>
 
