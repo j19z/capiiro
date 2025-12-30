@@ -58,19 +58,6 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Aesthetic Image Mockup Placeholder or Decoration */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, duration: 1.5 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-lg h-64 border-t border-x border-card-border rounded-t-2xl overflow-hidden opacity-40 mix-blend-multiply dark:mix-blend-overlay"
-            >
-                <div className="w-full h-full bg-card-bg flex items-center justify-center">
-                    <div className="w-4/5 h-4/5 border border-dashed border-card-border rounded-lg flex items-center justify-center text-text-muted italic text-sm">
-                        Visual Harmony in Every Detail
-                    </div>
-                </div>
-            </motion.div>
         </section>
     );
 };
