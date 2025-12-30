@@ -35,7 +35,7 @@ const Navbar = () => {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
                 isScrolled
-                    ? "bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm py-3"
+                    ? "bg-section-main/80 backdrop-blur-md shadow-sm py-3"
                     : "bg-transparent"
             )}
         >
@@ -51,7 +51,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium hover:text-accent transition-colors duration-200"
+                            className="text-sm font-medium text-secondary dark:text-primary hover:text-accent transition-colors duration-200"
                         >
                             {link.name}
                         </a>
@@ -104,7 +104,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-white dark:bg-black border-t border-neutral-warm/10 shadow-xl md:hidden"
+                        className="absolute top-full left-0 right-0 bg-section-main border-t border-card-border shadow-xl md:hidden"
                     >
                         <div className="flex flex-col p-6 space-y-4">
                             {navLinks.map((link) => (
