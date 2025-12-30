@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lora: var(--font-lora);
+  --font-bitter: var(--font-bitter);
+
+  --color-primary: #A0B0A3;
+  --color-secondary: #676636;
+  --color-accent: #C99213;
+  --color-neutral-warm: #D7D1C5;
+  --color-deep-orange: #BB6125;
+  --color-earth-tone: #85764F;
+
+  --color-background-light: #FFFFFF;
+  --color-background-alt-light: #F9F7F2;
+  /* Soft Sand */
+  --color-background-dark: #121212;
+  --color-background-alt-dark: #1E1E1E;
+
+  --foreground-light: #171717;
+  --foreground-dark: #EDEDED;
+
+  --color-section-main: var(--bg-section-main);
+  --color-section-alt: var(--bg-section-alt);
+  --color-card-bg: var(--bg-card);
+  --color-card-border: var(--border-card);
+  --color-text-muted: var(--text-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  /* Adjust based on navbar height */
+}
+
+:root {
+  --background: var(--color-background-light);
+  --foreground: var(--foreground-light);
+  --bg-section-main: var(--color-background-light);
+  --bg-section-alt: var(--color-background-alt-light);
+  --bg-card: #FFFFFF;
+  --border-card: rgba(0, 0, 0, 0.05);
+  --text-muted: var(--color-earth-tone);
+}
+
+.dark {
+  --background: var(--color-background-dark);
+  --foreground: var(--foreground-dark);
+  --bg-section-main: var(--color-background-dark);
+  --bg-section-alt: var(--color-background-alt-dark);
+  --bg-card: #1E1E1E;
+  --border-card: rgba(255, 255, 255, 0.1);
+  --text-muted: #A0A0A0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-bitter), ui-sans-serif, system-ui, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+section {
+  transition: background 0.3s ease;
+}
