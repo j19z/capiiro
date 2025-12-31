@@ -15,8 +15,8 @@ const Hero = () => {
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: 'url("/hero-bg.png")' }}
                 />
-                {/* Dynamic Overlay: Darker in dark mode, subtle tint in light mode */}
-                <div className="absolute inset-0 bg-background-light/40 dark:bg-background-dark/70 backdrop-blur-[2px]" />
+                {/* Subtle natural tint to ensure basic text contrast without dimming the image */}
+                <div className="absolute inset-0 bg-white/10 dark:bg-black/20" />
             </div>
 
             {/* Background Decor (kept for depth) */}
@@ -40,7 +40,7 @@ const Hero = () => {
                         Capiiro Organizing
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-lora italic text-secondary dark:text-primary mb-6 leading-tight drop-shadow-sm">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-lora italic text-secondary dark:text-primary mb-6 leading-tight drop-shadow-md filter brightness-95 dark:brightness-105">
                         {t("hero.title")}
                     </h1>
 
